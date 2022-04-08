@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E102C1E-73EA-426F-B675-44F9CE71DD0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>تدبیر</RootNamespace>
+    <AssemblyName>تدبیر</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FoxLearn.License">
+      <HintPath>D:\پروژه مکمل دوره توسعه گر\راهنمای فعال سازی پروژه توسعه گر\LicenseKey_Raw_Project\LicenseKey\LicenseKey\bin\Debug\FoxLearn.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl, Version=3.3.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControls.3.3.11\lib\net472\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="drbarema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drbarema.Designer.cs">
+      <DependentUpon>drbarema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="estalhjeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estalhjeform.Designer.cs">
+      <DependentUpon>estalhjeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logformcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logformcs.Designer.cs">
+      <DependentUpon>logformcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mamoretform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mamoretform.Designer.cs">
+      <DependentUpon>Mamoretform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="passform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passform.Designer.cs">
+      <DependentUpon>passform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tashveqhiform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tashveqhiform.Designer.cs">
+      <DependentUpon>Tashveqhiform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Esthgagheform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esthgagheform.Designer.cs">
+      <DependentUpon>Esthgagheform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persnolform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persnolform.Designer.cs">
+      <DependentUpon>Persnolform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drbarema.resx">
+      <DependentUpon>drbarema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estalhjeform.resx">
+      <DependentUpon>estalhjeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esthgagheform.resx">
+      <DependentUpon>Esthgagheform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logformcs.resx">
+      <DependentUpon>logformcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mamoretform.resx">
+      <DependentUpon>Mamoretform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passform.resx">
+      <DependentUpon>passform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persnolform.resx">
+      <DependentUpon>Persnolform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tashveqhiform.resx">
+      <DependentUpon>Tashveqhiform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\BBadr.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{dba12ac6-24fc-4034-afb1-3e62b96d630f}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{dd60f07d-8b47-4b20-b240-9832cc829d62}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\kroj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\lo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\uuuu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lo2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
